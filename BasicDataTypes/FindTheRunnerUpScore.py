@@ -21,8 +21,12 @@
 
 # Given list is . The maximum score is , second maximum is . Hence, we print  as the runner-up score.
 
-
 if __name__ == '__main__':
     n = int(input())
-    arr = map(int, input("Enter array elements : ").split())
-    print(arr)
+    arr = map(int, input().split())
+    sorted_arr = sorted(arr)
+    sort_arr = list(set(sorted_arr))
+    max_num = max(sort_arr)
+    sort_arr.remove(max_num)
+    runner_up = max(sort_arr)
+    print(runner_up)
